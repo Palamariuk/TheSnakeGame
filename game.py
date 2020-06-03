@@ -32,6 +32,7 @@ class Game(Snake, Field):
         pygame.display.update()
 
     def draw_border(self, screen, offset):
+	'''Draw white border'''
         pygame.draw.line(screen, (255, 255, 255),
                          (offset, offset),
                          (self.width * self.bl_size + offset, offset),
@@ -50,6 +51,7 @@ class Game(Snake, Field):
                          2)
 
     def draw_grid(self, screen, offset):
+	'''Draw gray grid'''
         for x in range(1, self.width):
             pygame.draw.line(screen, (50, 50, 50),
                              (x * self.bl_size + offset, offset),
